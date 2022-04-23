@@ -1,4 +1,4 @@
-from ast import Delete
+from password_generator import PasswordGenerator
 
 
 class Credentials:
@@ -25,20 +25,39 @@ class Credentials:
         """_summary_
 
         Args:
-            account_name (_type_): _description_
+            account_name (str): _description_
 
         Returns:
             _type_: _description_
         """
         return cls.password_vault.pop(account_name, "The account does not exist")
 
+    @classmethod
+    def display_credentials(cls):
+        """
+        Display all the credentials the user has access to
+
+        Returns:
+            dict: a collection of all the credentials the user has access to
+        """
+        return cls.password_vault
+
+    @staticmethod
+    def auto_generate_password(length):
+        """
+            Generates a new password using the auto generator
+        Args:
+            length (int): length of the password
+        """
+        return PasswordGenerator().non_duplicate_password(length)
+
 
 cred1 = Credentials("insta", "100200", "jaffar")
 # print(cred1.password_vault);
 cred2 = Credentials("twitter", "00000007", "hanan")
-print(Credentials.password_vault)
-print(Credentials.delete_credential("twitter"))
-print(Credentials.password_vault)
+# print(Credentials.password_vault)
+# print(Credentials.delete_credential("twitter"))
+# print(Credentials.password_vault)
 
 
 # password_vault={
@@ -46,3 +65,7 @@ print(Credentials.password_vault)
 #         "jaffar":"1334"
 #     }
 # }
+print(Credentials.password_vault)
+
+  
+    
