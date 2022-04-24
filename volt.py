@@ -52,6 +52,26 @@ class Credentials:
         return PasswordGenerator().non_duplicate_password(length)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 cred1 = Credentials("insta", "100200", "jaffar")
 # print(cred1.password_vault);
 cred2 = Credentials("twitter", "00000007", "hanan")
@@ -59,13 +79,13 @@ cred2 = Credentials("twitter", "00000007", "hanan")
 # print(Credentials.delete_credential("twitter"))
 # print(Credentials.password_vault)
 
-
+print(Credentials.auto_generate_password(10))
 # password_vault={
 #     "insta":{
 #         "jaffar":"1334"
 #     }
 # }
-print(Credentials.password_vault)
+# print(Credentials.password_vault)
 
   
     

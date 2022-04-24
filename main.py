@@ -1,11 +1,14 @@
+from volt import *
 if __name__ == "__main__":
     welcome_msg="""
-    Welcome to Password manger
+    Welcome to Password manager
     """
-    print(welcome_msg)
+    print(f"{welcome_msg:^500.upper()}")
     while True:
-        account_name,username,password = "account_name", "username", "password"
-        print(f"{account_name:} {username:10} {password:10}")
+        account_name,username,password = "ACCOUNT NAME", "USERNAME", "PASSWORD"
+        print(f"|{account_name:20} |{username:20} |{password:20}")
         for i,j in Credentials.password_vault.items():
             for k,l in j.items():
-                print(f"{i:10} {k:10} {l:10}")
+                print(f"|{i:20} |{k:20} |{l:20}")
+                
+        break 
