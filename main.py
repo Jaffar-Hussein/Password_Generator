@@ -44,3 +44,18 @@ if __name__ == "__main__":
         else:
             print("\u001b[31m", "WRONG CREDENTIALS\n", "\u001b[0m")
         print("TRY AGAIN")
+           # Authentified user space
+    user_options = {
+        "0": "QUIT",
+        "1": "Display Saved Credentials",
+        "2": "Create New Credentials",
+        "3": "Store an existing credentials",
+        "4": "Delete a Credential"
+    }
+    new_credentials_options = {
+        "y": "Auto Generated Password",
+        "n": "Input Your Custom Password",
+        "0": "Quit"
+    }
+    user_input = None
+    main_menu_msg = "Main Menu "
