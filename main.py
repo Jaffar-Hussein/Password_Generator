@@ -116,3 +116,17 @@ if __name__ == "__main__":
 
             input("Press Enter To Go Back to Main Menu.....")
             print()
+    # Deletion of a credential
+        if user_input == "4":
+            print("Enter the account name you want to delete")
+            user_input = input(" : ")
+            deletion=Credentials.delete_credential(user_input)
+            if deletion == False:
+                print("\u001b[33m",
+                  f"\t\tThe account you are trying to delete does not exist", "\u001b[0m")
+            else:
+                print("\u001b[32m",
+                    f"\t\tThe {user_input} account has been deleted successfully", "\u001b[0m")
+
+            input("Press Enter To Go Back to Main Menu.....")
+            print()
