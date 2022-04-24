@@ -1,10 +1,9 @@
 
 from password_generator import PasswordGenerator
 
-
 class Credentials:
     """
-    it creates credentials account which takes account name ,username and password
+    Creates credentials account which takes account name ,username and password
     """
     password_vault = {}
 
@@ -24,13 +23,14 @@ class Credentials:
 
     @classmethod
     def delete_credential(cls, account_name):
-        """deletes a user by account name
+        """
+        Deletes a user by account name
 
         Args:
-            account_name (str): _description_
+            account_name (str): The name of the account to be deleted
 
         Returns:
-            _type_: _description_
+            str: account name or the fail report
         """
         return cls.password_vault.pop(account_name, "The account does not exist")
 
@@ -52,64 +52,55 @@ class Credentials:
             length (int): length of the password
         """
         return PasswordGenerator().non_duplicate_password(length)
+
+
 class User:
     """
     creates a new user, and authenticates a user to the system
     """
-    local_credentials=()
-    def __init__(self,local_username,local_password):
+    local_credentials = ()
+
+    def __init__(self, local_username, local_password):
         """initialize user
 
         Args:
             password (str): user password 
             username (str): username of the user
         """
-        self.local_username= local_username
-        self.local_password= local_password
-        User.local_credentials=(local_username,local_password)
-        
+        self.local_username = local_username
+        self.local_password = local_password
+        User.local_credentials = (local_username, local_password)
+
     @classmethod
-    def authenticate(cls,username,password):
+    def authenticate(cls, username, password):
         """Authenticate user into the system
 
         Args:
             username (str): username to authenticate
             password (str): password to authenticate
         """
-        if (username,password)==cls.local_credentials:
+        if (username, password) == cls.local_credentials:
             return True
         return False
 
 
-user1=User("jaffar","123456",)
-print(user1.local_credentials)
-print(user1.authenticate("hanan","23434554"))
-print(user1.authenticate("jaffar","123456"))
+# user1 = User("jaffar", "123456",)
+# print(user1.local_credentials)
+# print(user1.authenticate("hanan", "23434554"))
+# print(user1.authenticate("jaffar", "123456"))
 
 
+# cred1 = Credentials("insta", "100200", "jaffar")
+# # print(cred1.password_vault);
+# cred2 = Credentials("twitter", "00000007", "hanan")
+# # print(Credentials.password_vault)
+# # print(Credentials.delete_credential("twitter"))
+# # print(Credentials.password_vault)
 
-
-
-
-
-
-
-
-
-cred1 = Credentials("insta", "100200", "jaffar")
-# print(cred1.password_vault);
-cred2 = Credentials("twitter", "00000007", "hanan")
-# print(Credentials.password_vault)
-# print(Credentials.delete_credential("twitter"))
-# print(Credentials.password_vault)
-
-print(Credentials.auto_generate_password(10))
-# password_vault={
-#     "insta":{
-#         "jaffar":"1334"
-#     }
-# }
-# print(Credentials.password_vault)
-
-  
-    
+# print(Credentials.auto_generate_password(10))
+# # password_vault={
+# #     "insta":{
+# #         "jaffar":"1334"
+# #     }
+# # }
+# # print(Credentials.password_vault)
