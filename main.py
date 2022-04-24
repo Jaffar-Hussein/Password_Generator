@@ -136,3 +136,5 @@ if __name__ == "__main__":
                     f"""\t\tYou've left our system ....... See you sooon
                                     Made with  ♥️ HJ 
                     """, "\u001b[0m")
+
+# Bug with the creation of password page yes no area
