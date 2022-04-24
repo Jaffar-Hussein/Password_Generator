@@ -103,3 +103,16 @@ if __name__ == "__main__":
 
             input("Press Enter To Go Back to Main Menu.....")
             print()
+     # Storage of existing credentials
+        if user_input == "3":
+            print("Input the details below : ")
+            account_name_3 = input("ACCOUNT NAME : ")
+            user_username_3 = input("USERNAME : ")
+            user_password_3 = input("PASSWORD : ")
+            print()
+            Credentials(account_name_3, user_password_3, user_username_3)
+            print("\u001b[32m",
+                  "\t\tCREDENTIAL SUCCESSFULLY SAVED", "\u001b[0m")
+
+            input("Press Enter To Go Back to Main Menu.....")
+            print()
