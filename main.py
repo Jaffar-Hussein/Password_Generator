@@ -59,3 +59,10 @@ if __name__ == "__main__":
     }
     user_input = None
     main_menu_msg = "Main Menu "
+    while user_input != "0":
+        # Main Menu
+        print(f"{main_menu_msg:^350}")
+        for option, message in user_options.items():
+            print(f"{option:^30} {message:<30}")
+        # Options
+        user_input = input(" : ")
