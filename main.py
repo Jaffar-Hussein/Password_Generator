@@ -130,3 +130,9 @@ if __name__ == "__main__":
 
             input("Press Enter To Go Back to Main Menu.....")
             print()
+    else:
+        # Bye bye message
+        print("\u001b[32m",
+                    f"""\t\tYou've left our system ....... See you sooon
+                                    Made with  ♥️ HJ 
+                    """, "\u001b[0m")
