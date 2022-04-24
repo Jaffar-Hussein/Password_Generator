@@ -32,7 +32,7 @@ class Credentials:
         Returns:
             str: account name or the fail report
         """
-        return cls.password_vault.pop(account_name, "The account does not exist")
+        return cls.password_vault.pop(account_name, False)
 
     @classmethod
     def display_credentials(cls):
@@ -90,11 +90,11 @@ class User:
 # print(user1.authenticate("jaffar", "123456"))
 
 
-# cred1 = Credentials("insta", "100200", "jaffar")
+cred1 = Credentials("insta", "100200", "jaffar")
 # # print(cred1.password_vault);
-# cred2 = Credentials("twitter", "00000007", "hanan")
+cred2 = Credentials("twitter", "00000007", "hanan")
 # # print(Credentials.password_vault)
-# # print(Credentials.delete_credential("twitter"))
+print(Credentials.delete_credential("twitter"))
 # # print(Credentials.password_vault)
 
 # print(Credentials.auto_generate_password(10))
