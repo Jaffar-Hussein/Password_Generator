@@ -47,7 +47,7 @@ A simple password storage and generating app that runs on the terminal.
    - OUTPUT: Success message
 7. Quit
    - INPUT : 0
-   - OUTPUT : Bye
+   - OUTPUT : Bye Bye Message and exit of the application
 
 ## License
 
