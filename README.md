@@ -6,7 +6,7 @@ A simple password storage and generating app that runs on the terminal.
 
 ## Technologies Used
 
-- Python3.9
+- Python 3.10.1
 - unittest (Python test framework)
 
 
