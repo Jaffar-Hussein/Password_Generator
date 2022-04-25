@@ -10,7 +10,9 @@ class VoltTest(unittest.TestCase):
     """
 
     def setUp(self):
-        """_summary_
+        """
+        Runs before the test cases to initialize the different parameters to
+        be tested
         """
         self.new_user = User('hanan', 'jaffar')
         self.authenticate_false = User.authenticate('hanan', 'hussein')
