@@ -41,7 +41,7 @@ class VoltTest(unittest.TestCase):
         """
         Checks if the display_credentials class returns a dictionary for the list of credentials
         """
-        self.assertisNotNone(self.display_dict)
+        self.assertIsNotNone(self.display_dict)
 
     def test_User(self):
         """
@@ -63,7 +63,7 @@ class VoltTest(unittest.TestCase):
         Test to see if the length of the password auto generated is correct 
         Hence the password auto generation function works
         """
-        self.assertEquals(len(self.auto_generated_password), 9)
+        self.assertEqual(len(self.auto_generated_password), 9)
 
 
 if __name__ == "__main__":

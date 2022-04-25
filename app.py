@@ -55,17 +55,21 @@ if __name__ == "__main__":
     new_credentials_options = {
         "y": "Auto Generated Password",
         "n": "Input Your Custom Password",
+        "m" :"Back to Main Menu",
         "0": "Quit"
     }
     user_input = None
     main_menu_msg = "Main Menu "
     while user_input != "0":
         # Main Menu
+        print()
         print(f"{main_menu_msg:^80}")
         for option, message in user_options.items():
             print(f"{option:^30} {message:<30}")
         # Options
-        user_input = input(" : ")
+        print()
+        user_input = input("Choose an option : ")
+        print()
      # Display of available credentials
         if user_input == "1":
             account_name, username, password = "ACCOUNT NAME|", "USERNAME|", "PASSWORD|"
@@ -94,12 +98,16 @@ if __name__ == "__main__":
                     " How long do you want the password to be ? : ")
                 user_password2 = Credentials.auto_generate_password(
                     int(user_input))
+                Credentials(account_name_2, user_password2, username_2)
+                print("\u001b[32m",
+                    "\t\tCREDENTIAL SUCCESSFULLY SAVED", "\u001b[0m")
             elif user_input == 'n':
                 user_password2 = input("Input your own password : ")
-
-            Credentials(account_name_2, user_password2, username_2)
-            print("\u001b[32m",
-                  "\t\tCREDENTIAL SUCCESSFULLY SAVED", "\u001b[0m")
+                Credentials(account_name_2, user_password2, username_2)
+                print("\u001b[32m",
+                    "\t\tCREDENTIAL SUCCESSFULLY SAVED", "\u001b[0m")
+            else:
+                continue
 
             input("Press Enter To Go Back to Main Menu.....")
             print()
