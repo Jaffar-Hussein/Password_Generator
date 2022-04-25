@@ -61,7 +61,7 @@ if __name__ == "__main__":
     main_menu_msg = "Main Menu "
     while user_input != "0":
         # Main Menu
-        print(f"{main_menu_msg:^350}")
+        print(f"{main_menu_msg:^80}")
         for option, message in user_options.items():
             print(f"{option:^30} {message:<30}")
         # Options
@@ -134,7 +134,7 @@ if __name__ == "__main__":
         # Bye bye message
         print("\u001b[32m",
                     f"""\t\tYou've left our system ....... See you sooon
-                                    Made with  ♥️ HJ 
+                                    Made with ♥️  HJ 
                     """, "\u001b[0m")
 
 # Bug with the creation of password page yes no area
